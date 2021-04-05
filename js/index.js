@@ -58,6 +58,37 @@ buttonText.textContent = siteContent.cta['button'];
 const headerImg = document.querySelector('.cta img');
 headerImg.setAttribute('src', siteContent.cta['img-src']);
 
+const mainSectionTop = document.querySelector('.top-content');
+const topSubs = mainSectionTop.querySelectorAll('h4');
+const topText = mainSectionTop.querySelectorAll('p');
+topSubs[0].textContent = siteContent['main-content']['features-h4'];
+topSubs[1].textContent = siteContent['main-content']['about-h4'];
+topText[0].textContent = siteContent['main-content']['about-content'];
+topText[1].textContent = siteContent['main-content']['features-content'];
+
+const centerImg = document.querySelector('#middle-img');
+centerImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+const mainSectionBot = document.querySelector('.bottom-content');
+const botSubs = mainSectionBot.querySelectorAll('h4');
+const botText = mainSectionBot.querySelectorAll('p');
+botSubs[0].textContent = siteContent['main-content']['services-h4'];
+botSubs[1].textContent = siteContent['main-content']['product-h4'];
+botSubs[2].textContent = siteContent['main-content']['vision-h4'];
+botText[0].textContent = siteContent['main-content']['services-content'];
+botText[1].textContent = siteContent['main-content']['product-content'];
+botText[2].textContent = siteContent['main-content']['vision-content'];
+
+
+
+
+
+
+
+
+
+
+
 
 
 
