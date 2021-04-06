@@ -41,13 +41,28 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const navLinks = document.querySelectorAll('nav > a')
+
+const navLinks = document.querySelectorAll('nav  a')
 navLinks[0].textContent = siteContent.nav["nav-item-1"]
 navLinks[1].textContent = siteContent.nav["nav-item-2"]
 navLinks[2].textContent = siteContent.nav["nav-item-3"]
 navLinks[3].textContent = siteContent.nav["nav-item-4"]
 navLinks[4].textContent = siteContent.nav["nav-item-5"]
 navLinks[5].textContent = siteContent.nav["nav-item-6"]
+
+navLinks.forEach(item => item.style.color = 'green');
+
+const blogLink = document.createElement('a');
+blogLink.textContent = 'Blog';
+blogLink.href = '#';
+document.querySelector('nav').appendChild(blogLink);
+blogLink.style.color = 'green'
+
+const homeLink = document.createElement('a');
+homeLink.textContent = 'Home';
+homeLink.href = '#';
+document.querySelector('nav').prepend(homeLink);
+homeLink.style.color = 'green'
 
 const headerText = document.querySelector('.cta h1');
 headerText.textContent = siteContent.cta["h1"];
@@ -57,6 +72,7 @@ buttonText.textContent = siteContent.cta['button'];
 
 const headerImg = document.querySelector('.cta img');
 headerImg.setAttribute('src', siteContent.cta['img-src']);
+headerImg.alt = 'Another header img'
 
 const mainSectionTop = document.querySelector('.top-content');
 const topSubs = mainSectionTop.querySelectorAll('h4');
